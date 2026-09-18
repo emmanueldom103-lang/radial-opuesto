@@ -109,3 +109,38 @@ body{
    background-repeat:no-repeat;
  }
 }
+
+/* V7.7 — ficha técnica en dos columnas, entre avión y simulador */
+.aircraftSpecs{display:none}
+@media(max-width:699px){
+ .hero{height:330px}
+ .aircraftSpecs{
+   display:block;
+   margin:-6px 0 12px;
+   padding:12px 13px 13px;
+   border:1px solid rgba(175,215,250,.42);
+   border-radius:16px;
+   background:rgba(5,24,44,.76);
+   backdrop-filter:blur(7px);
+   -webkit-backdrop-filter:blur(7px);
+   box-shadow:0 8px 24px rgba(0,0,0,.18);
+ }
+ .aircraftSpecs h2{
+   margin:0 0 11px;
+   display:flex;align-items:center;gap:9px;
+   font-size:11px;font-weight:600;letter-spacing:3px;
+   color:#f3f8ff;white-space:nowrap;
+ }
+ .aircraftSpecs h2:before,.aircraftSpecs h2:after{
+   content:"";height:1px;flex:1;background:rgba(225,240,255,.65)
+ }
+ .specGrid{display:grid;grid-template-columns:1fr 1fr;column-gap:13px;row-gap:12px}
+ .specGrid:after{content:"";position:absolute}
+ .specItem{display:grid;grid-template-columns:34px 1fr;gap:8px;align-items:center;min-width:0}
+ .specItem:nth-child(even){border-left:1px solid rgba(180,215,245,.28);padding-left:12px}
+ .specIcon{font-size:27px;line-height:1;text-align:center;color:#d9efff}
+ .specItem span:last-child{display:flex;flex-direction:column;min-width:0}
+ .specItem small{font-size:10px;line-height:1.15;color:#cfe6fa;margin-bottom:3px}
+ .specItem b{font-size:12px;line-height:1.18;color:#fff}
+ .specItem em{font-size:9px;line-height:1.2;color:#d7e7f5;font-style:normal;margin-top:2px}
+}
