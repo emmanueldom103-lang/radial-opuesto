@@ -219,3 +219,24 @@ body{
  }
  .app{position:relative;z-index:0}
 }
+
+/* V7.12 — corrección Safari/iPhone: fondo visible, único y continuo */
+@media(max-width:699px){
+ html{
+   min-height:100%;
+   background:#061426;
+ }
+ body{
+   min-height:100vh;
+   position:static;
+   background-color:#061426!important;
+   background-image:
+     linear-gradient(to bottom,rgba(2,12,25,.02) 0%,rgba(2,12,25,.14) 55%,rgba(2,12,25,.34) 100%),
+     url("6F8C2460-717C-4828-AF39-13AB4346FF17.png")!important;
+   background-position:center top!important;
+   background-size:100% 100%!important;
+   background-repeat:no-repeat!important;
+   background-attachment:scroll!important;
+ }
+ body::before{content:none!important;display:none!important}
+}
