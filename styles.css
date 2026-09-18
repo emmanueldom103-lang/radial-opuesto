@@ -98,3 +98,14 @@ body{
 @media(max-width:699px){
  body{background-image:linear-gradient(rgba(2,12,25,.05),rgba(2,12,25,.38)),url("6F8C2460-717C-4828-AF39-13AB4346FF17.png");background-position:center top;background-size:cover}
 }
+
+/* V7.6 — fondo limpio: evitar duplicar texto y reservar el avión arriba */
+@media(max-width:699px){
+ .hero{height:330px;padding:0}
+ .hero .brand{display:none!important}
+ body{
+   background-position:center top;
+   background-size:100% auto;
+   background-repeat:no-repeat;
+ }
+}
