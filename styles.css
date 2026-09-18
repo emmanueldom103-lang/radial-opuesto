@@ -87,3 +87,14 @@
  #examPanel .stats>div{background:rgba(4,24,43,.78)}
  footer{letter-spacing:2px;padding-top:11px}
 }
+
+/* V7.5 — usar exclusivamente el nuevo fondo subido */
+body{
+ background-image:linear-gradient(rgba(2,12,25,.08),rgba(2,12,25,.42)),url("6F8C2460-717C-4828-AF39-13AB4346FF17.png");
+ background-position:center top;
+ background-size:cover;
+ background-repeat:no-repeat;
+}
+@media(max-width:699px){
+ body{background-image:linear-gradient(rgba(2,12,25,.05),rgba(2,12,25,.38)),url("6F8C2460-717C-4828-AF39-13AB4346FF17.png");background-position:center top;background-size:cover}
+}
