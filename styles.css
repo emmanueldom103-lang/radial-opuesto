@@ -29,3 +29,31 @@
  #examPanel .examActions{gap:6px;margin-top:6px}
  #examPanel .examActions button{min-height:44px}
 }
+/* V7.3 — composición visual aprobada: avión protagonista + examen en dos columnas */
+@media(max-width:699px){
+ body{background-position:center top;background-size:auto 100%;background-attachment:scroll}
+ .hero{height:285px;padding-top:18px}
+ .brand{justify-content:center;width:100%}
+ .brand b{font-size:23px;letter-spacing:2px}
+ .brand small{font-size:9px;letter-spacing:2px}
+ #examPanel{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:7px;align-items:start}
+ #examPanel[hidden]{display:none}
+ #examPanel .examTop{grid-column:1/-1}
+ #examPanel .shown{grid-column:1;grid-row:2;margin:0;z-index:2}
+ #examPanel .shown strong{font-size:29px}
+ #examPanel .instrument{grid-column:1;grid-row:3;width:100%;margin:0}
+ #examPanel .answerCard{grid-column:2;grid-row:2/4;padding:8px 6px;align-self:stretch}
+ #examPanel .wheelPicker{height:132px;grid-template-columns:repeat(3,minmax(0,1fr)) 12px;width:100%}
+ #examPanel .wheel{height:132px;padding:44px 0}
+ #examPanel .wheel button{width:100%;height:44px;font-size:26px}
+ #examPanel .wheelSelect{top:44px;height:44px;left:2px;right:12px}
+ #examPanel .wheelShade{height:41px}
+ #examPanel .degree{font-size:22px}
+ #examPanel .answerCard>strong{font-size:25px;margin:2px 0 6px}
+ #examPanel #check{font-size:13px;padding:5px;min-height:46px}
+ #examPanel #feedback{font-size:10px;line-height:1.2;min-height:34px}
+ #examPanel .stats,#examPanel .review,#examPanel .result,#examPanel .examActions{grid-column:1/-1}
+ #examPanel .stats{grid-template-columns:repeat(3,1fr)}
+ #examPanel .review{margin-top:0}
+ #examPanel .examActions{margin-top:0}
+}
