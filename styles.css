@@ -57,3 +57,33 @@
  #examPanel .review{margin-top:0}
  #examPanel .examActions{margin-top:0}
 }
+
+/* V7.4 — acabado visual inspirado en la maqueta aprobada */
+@media(max-width:699px){
+ body{background-position:center top;background-size:auto 100%;background-repeat:no-repeat;background-attachment:scroll}
+ .app{padding-left:12px;padding-right:12px}
+ .hero{height:300px;padding-top:16px;align-items:flex-start}
+ .brand{width:100%;justify-content:center;text-align:center;text-shadow:0 2px 8px rgba(0,0,0,.45)}
+ .brand span{align-items:center;width:100%}
+ .brand b{font-size:25px;font-weight:500;letter-spacing:5px}
+ .brand em{font-style:normal;font-size:10px;letter-spacing:5px;margin-top:5px;color:#eaf5ff}
+ .brand small{font-size:8px;letter-spacing:2px;margin-top:7px;color:#eaf5ff}
+ .tabs{margin-bottom:8px}
+ .glass{background:rgba(5,24,44,.72);border-color:rgba(175,215,250,.32)}
+ #examPanel{grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:7px}
+ #examPanel .examTop{border-radius:15px}
+ #examPanel .progressCard{padding:9px 10px}
+ #examPanel .timerCard{padding:0 8px}
+ #examPanel .shown{background:rgba(4,31,59,.82);border-color:#168cff}
+ #examPanel .shown strong{font-size:30px;color:#fff}
+ #examPanel .instrument{width:100%}
+ #examPanel .answerCard{background:rgba(4,24,43,.82);border-radius:14px}
+ #examPanel .wheelPicker{height:128px}
+ #examPanel .wheel{height:128px;padding:42px 0}
+ #examPanel .wheel button{height:42px;font-size:25px}
+ #examPanel .wheelSelect{top:42px;height:42px}
+ #examPanel #check{background:#08a63a;border-color:#22e365;box-shadow:0 0 12px rgba(0,210,80,.32);font-size:13px}
+ #examPanel .stats{grid-template-columns:repeat(3,1fr);gap:5px}
+ #examPanel .stats>div{background:rgba(4,24,43,.78)}
+ footer{letter-spacing:2px;padding-top:11px}
+}
