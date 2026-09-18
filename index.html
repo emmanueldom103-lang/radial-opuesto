@@ -1,1 +1,37 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#07182b"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Radial Opuesto"><title>Radial Opuesto Mobile</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css"></head><body><main class="app"><header class="hero"><div class="brand">✈ <span><b>Radial Opuesto</b><small>TRAIN YOUR MIND. FLY SAFER.</small></span></div></header><nav class="tabs"><button id="freeTab" class="active">◉ Modo libre</button><button id="examTab">◉ Modo examen</button></nav><section id="freePanel"><div class="values"><div class="glass value"><small>RADIAL</small><strong id="radialOut">000°</strong></div><div class="glass value"><small>OPUESTO</small><strong id="oppOut">180°</strong></div></div><div id="dial" class="instrument"></div><div class="hint">☝ Arrastra la aguja con el dedo</div><div class="fine"><button id="minus">− 1°</button><button id="plus">+ 1°</button></div><div class="actions"><button id="reset">↻<b>Reiniciar</b></button><button id="swap">⇄<b>Intercambiar</b></button><button id="north">⌾<b>Centrar Norte</b></button></div></section><section id="examPanel" hidden><div class="examTop"><div class="glass progressCard"><b id="counter">Pregunta 1 de 20</b><div class="progress"><i id="progressBar"></i></div></div><div class="glass timerCard">⏱ <b id="timer">0.0 s</b></div></div><div class="glass shown"><small>RADIAL MOSTRADO</small><strong id="question">072°</strong></div><div id="examDial" class="instrument"></div><div class="hint">☝ Mueve la aguja hasta el radial opuesto</div><div class="glass answerCard"><small>TU RESPUESTA</small><strong id="answerDisplay">000°</strong><div class="examFine"><button id="examMinus">− 1°</button><button id="examPlus">+ 1°</button></div><button id="check">✓ Comprobar</button><div id="feedback">Selecciona tu respuesta con la aguja.</div></div><div class="stats"><div class="glass"><small>✓ Correctas</small><b id="ok">0</b></div><div class="glass"><small>✕ Incorrectas</small><b id="bad">0</b></div><div class="glass"><small>◎ Precisión</small><b id="accuracy">—</b></div><div class="glass"><small>◷ Media</small><b id="average">—</b></div><div class="glass"><small>🏆 Mejor</small><b id="best">—</b></div><div class="glass"><small>🔥 Racha</small><b id="streak">0</b></div></div><div class="glass review"><b>Radiales a repasar</b><div id="review">Aún no hay errores.</div></div><div id="result" class="glass result" hidden></div><div class="examActions"><button id="exitExam">← Salir</button><button id="next" disabled>Siguiente →</button></div></section><footer>✈ &nbsp; PRACTICE · IMPROVE · FLY</footer></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#07182b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Radial Opuesto">
+<title>Radial Opuesto Mobile</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<main class="app">
+<header class="hero"><div class="brand">✈ <span><b>Radial Opuesto</b><small>TRAIN YOUR MIND. FLY SAFER.</small></span></div></header>
+<nav class="tabs"><button id="freeTab" class="active">◉ Modo libre</button><button id="examTab">◉ Modo examen</button></nav>
+
+<section id="freePanel">
+ <div class="values"><div class="glass value"><small>RADIAL</small><strong id="radialOut">000°</strong></div><div class="glass value"><small>OPUESTO</small><strong id="oppOut">180°</strong></div></div>
+ <div id="dial" class="instrument" aria-label="Rosa de los rumbos interactiva"></div>
+ <div class="hint">☝ Arrastra la aguja con el dedo</div>
+ <div class="fine"><button id="minus">− 1°</button><button id="plus">+ 1°</button></div>
+ <div class="actions"><button id="reset">↻<b>Reiniciar</b></button><button id="swap">⇄<b>Intercambiar</b></button><button id="north">⌾<b>Centrar Norte</b></button></div>
+</section>
+
+<section id="examPanel" hidden>
+ <div class="examTop"><div class="glass progressCard"><b id="counter">Pregunta 1 de 20</b><div class="progress"><i id="progressBar"></i></div></div><div class="glass timerCard">⏱ <b id="timer">0.0 s</b></div></div>
+ <div class="glass shown"><small>RADIAL MOSTRADO</small><strong id="question">072°</strong></div>
+ <div id="examDial" class="instrument" aria-label="Mueve la aguja para seleccionar tu respuesta"></div>
+ <div class="hint">☝ Mueve la aguja hasta el radial opuesto</div>
+ <div class="glass answerCard"><small>TU RESPUESTA</small><strong id="answerDisplay">000°</strong><div class="examFine"><button id="examMinus">− 1°</button><button id="examPlus">+ 1°</button></div><button id="check">✓ Comprobar</button><div id="feedback" aria-live="polite">Selecciona tu respuesta con la aguja.</div></div>
+ <div class="stats"><div class="glass"><small>✓ Correctas</small><b id="ok">0</b></div><div class="glass"><small>✕ Incorrectas</small><b id="bad">0</b></div><div class="glass"><small>◎ Precisión</small><b id="accuracy">—</b></div><div class="glass"><small>◷ Media</small><b id="average">—</b></div><div class="glass"><small>🏆 Mejor</small><b id="best">—</b></div><div class="glass"><small>🔥 Racha</small><b id="streak">0</b></div></div>
+ <div class="glass review"><b>Radiales a repasar</b><div id="review">Aún no hay errores.</div></div>
+ <div id="result" class="glass result" hidden></div>
+ <div class="examActions"><button id="exitExam">← Salir</button><button id="next" disabled>Siguiente →</button></div>
+</section>
+<footer>✈ &nbsp; PRACTICE · IMPROVE · FLY</footer>
+</main><script src="app.js"></script></body></html>

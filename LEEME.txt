@@ -1,0 +1,10 @@
+RADIAL OPUESTO V7 MÓVIL
+
+1. Descomprime el ZIP.
+2. Abre index.html en un navegador moderno.
+3. Modo libre: mueve la aguja con el dedo.
+4. Modo examen: mueve la aguja para seleccionar la respuesta; la casilla TU RESPUESTA se actualiza automáticamente.
+5. Usa -1° / +1° para ajuste fino y pulsa Comprobar.
+
+NOTA PWA:
+Para instalarla como app desde “Añadir a pantalla de inicio” con todas las funciones PWA, los archivos deben servirse desde HTTPS (o localhost). El simulador básico funciona como web local sin instalación.
