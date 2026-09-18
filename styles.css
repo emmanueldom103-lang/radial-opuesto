@@ -195,3 +195,27 @@ body{
  }
  .aircraftSpecs h2{margin-bottom:9px}
 }
+
+/* V7.11 — un único fondo que cubre toda la longitud de la aplicación */
+@media(max-width:699px){
+ html{background:#061426}
+ body{
+   position:relative;
+   background:none!important;
+   background-color:#061426!important;
+ }
+ body::before{
+   content:"";
+   position:absolute;
+   z-index:-2;
+   inset:0;
+   min-height:100%;
+   background-image:
+     linear-gradient(to bottom,rgba(2,12,25,.02) 0%,rgba(2,12,25,.18) 55%,rgba(2,12,25,.38) 100%),
+     url("6F8C2460-717C-4828-AF39-13AB4346FF17.png");
+   background-position:center top;
+   background-size:100% 100%;
+   background-repeat:no-repeat;
+ }
+ .app{position:relative;z-index:0}
+}
