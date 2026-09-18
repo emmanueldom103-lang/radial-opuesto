@@ -25,9 +25,8 @@
 <section id="examPanel" hidden>
  <div class="examTop"><div class="glass progressCard"><b id="counter">Pregunta 1 de 20</b><div class="progress"><i id="progressBar"></i></div></div><div class="glass timerCard">⏱ <b id="timer">0.0 s</b></div></div>
  <div class="glass shown"><small>RADIAL MOSTRADO</small><strong id="question">072°</strong></div>
- <div id="examDial" class="instrument" aria-label="Mueve la aguja para seleccionar tu respuesta"></div>
- <div class="hint">☝ Mueve la aguja hasta el radial opuesto</div>
- <div class="glass answerCard"><small>TU RESPUESTA</small><strong id="answerDisplay">000°</strong><div class="examFine"><button id="examMinus">− 1°</button><button id="examPlus">+ 1°</button></div><button id="check">✓ Comprobar</button><div id="feedback" aria-live="polite">Selecciona tu respuesta con la aguja.</div></div>
+ <div id="examDial" class="instrument examStatic" aria-label="Rosa de los rumbos del radial mostrado"></div>
+ <div class="glass answerCard"><small>TU RESPUESTA</small><div class="wheelPicker" aria-label="Selector de radial"><div class="wheelShade top"></div><div class="wheelSelect"></div><div class="wheelShade bottom"></div><div id="wheel1" class="wheel"></div><div id="wheel2" class="wheel"></div><div id="wheel3" class="wheel"></div><span class="degree">°</span></div><strong id="answerDisplay">000°</strong><button id="check">✓ Comprobar 000°</button><div id="feedback" aria-live="polite">Desliza las ruedas para seleccionar tu respuesta.</div></div>
  <div class="stats"><div class="glass"><small>✓ Correctas</small><b id="ok">0</b></div><div class="glass"><small>✕ Incorrectas</small><b id="bad">0</b></div><div class="glass"><small>◎ Precisión</small><b id="accuracy">—</b></div><div class="glass"><small>◷ Media</small><b id="average">—</b></div><div class="glass"><small>🏆 Mejor</small><b id="best">—</b></div><div class="glass"><small>🔥 Racha</small><b id="streak">0</b></div></div>
  <div class="glass review"><b>Radiales a repasar</b><div id="review">Aún no hay errores.</div></div>
  <div id="result" class="glass result" hidden></div>
