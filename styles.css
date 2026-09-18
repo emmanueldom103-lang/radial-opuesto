@@ -176,3 +176,22 @@ body{
    filter:drop-shadow(0 2px 4px rgba(0,0,0,.55));
  }
 }
+
+/* V7.9 — un solo fondo, sin repetición; ficha técnica más cerca del avión */
+@media(max-width:699px){
+ html{background:#061426}
+ body{
+   background-image:linear-gradient(rgba(2,12,25,.04),rgba(2,12,25,.30)),url("6F8C2460-717C-4828-AF39-13AB4346FF17.png");
+   background-position:center top;
+   background-size:100% auto;
+   background-repeat:no-repeat;
+   background-color:#061426;
+ }
+ .hero{height:292px}
+ .aircraftSpecs{
+   margin:-22px 0 10px;
+   padding-top:4px;
+   padding-bottom:10px;
+ }
+ .aircraftSpecs h2{margin-bottom:9px}
+}
