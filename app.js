@@ -10,7 +10,7 @@ function rotate(inst,n){n=norm(n);inst.moving.setAttribute("transform",`rotate($
 function setFree(n){radial=norm(n);rotate(free,radial);radialOut.textContent=fmt(radial);oppOut.textContent=fmt(opp(radial))}
 function setAnswer(n){answerRadial=Math.round(n);answerDisplay.textContent=String(answerRadial).padStart(3,"0")+"°";check.textContent=answerRadial<=360?"✓ Comprobar "+String(answerRadial).padStart(3,"0")+"°":"Radial no válido";check.classList.toggle("invalid",answerRadial>360)}
 function buildWheel(el,max){el.innerHTML="";for(let n=0;n<=max;n++){let b=document.createElement("button");b.type="button";b.textContent=n;b.dataset.n=n;el.appendChild(b)}}
-function wheelValue(el){return Math.max(0,Math.min(el.children.length-1,Math.round(el.scrollTop/58)))}
+function wheelValue(el){return Math.max(0,Math.min(el.children.length-1,Math.round(el.scrollTop/el.children[0].getBoundingClientRect().height)))}
 function syncWheels(){if(answered)return;setAnswer(wheelValue(wheel1)*100+wheelValue(wheel2)*10+wheelValue(wheel3))}
 function resetWheels(){[wheel1,wheel2,wheel3].forEach(w=>w.scrollTop=0);setAnswer(0)}
 buildWheel(wheel1,3);buildWheel(wheel2,9);buildWheel(wheel3,9);[wheel1,wheel2,wheel3].forEach(w=>{w.addEventListener("scroll",syncWheels,{passive:true});w.addEventListener("click",e=>{let b=e.target.closest("button");if(b)w.scrollTo({top:+b.dataset.n*58,behavior:"smooth"})})});
